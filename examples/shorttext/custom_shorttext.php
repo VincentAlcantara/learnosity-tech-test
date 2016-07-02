@@ -49,7 +49,7 @@
 
         <link rel="stylesheet" href="<?php echo $env['www'] ?>/src/static/vendor/css/bootstrap.min.css">
         <script src="<?php echo $env['www'] ?>/src/static/vendor/js/jquery-1.11.0.min.js"></script>
-        <script src="//questions.learnosity.com"></script>
+        <script src="/src/static/custom/questions.learnosity.js"></script>
         <script>
 
 
