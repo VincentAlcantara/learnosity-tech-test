@@ -4,24 +4,57 @@ LearnosityAmd.define(['jquery-v1.10.2'], function ($) {
 
     //function to build up HTML table and add onclick handlers - return either as JQuery Element or String of HTML
     function buildHtmlAndInteractions(init) {
-
+        //init.$el contains the rendered custom question type
         var $htmlObj;
-
+        
         //Build up the structure you want to use here, and add any event handling you may want to use
-       
-        //
-        //Learnosity Tech Test: Complete here
-        //
+        
+        $htmlObj = '<script>function setText(id, value) {  document.getElementById(id).value = value;}</script>' +
+        '<div id="numberpad1" class="col-xs-4 btn-group-vertical" role="group" aria-label="...">' +
+        '<input id="column1" class="btn btn-secondary btn-block" disabled=disabled/>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column1\', 0)">0</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column1\', 1)">1</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column1\', 2)">2</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column1\', 3)">3</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column1\', 4)">4</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column1\', 5)">5</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column1\', 6)">6</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column1\', 7)">7</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column1\', 8)">8</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column1\', 9)">9</button>' +
+        '</div>' +
+        '<div id="numberpad2" class="col-xs-4 btn-group-vertical" role="group aria-label="...">' +
+        '<input id="column2" class="btn btn-secondary btn-block" disabled=disabled/>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column2\', 0)">0</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column2\', 1)">1</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column2\', 2)">2</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column2\', 3)">3</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column2\', 4)">4</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column2\', 5)">5</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column2\', 6)">6</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column2\', 7)">7</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column2\', 8)">8</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column2\', 9)">9</button>' +
+        '</div>' +
+        '<div id="numberpad3" class="col-xs-4 btn-group-vertical" role="group" aria-label="...">' +
+        '<input id="column3" class="btn btn-secondary btn-block" disabled=disabled/>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column3\', 0)">0</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column3\', 1)">1</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column3\', 2)">2</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column3\', 3)">3</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column3\', 4)">4</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column3\', 5)">5</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column3\', 6)">6</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column3\', 7)">7</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column3\', 8)">8</button>' +
+        '<button type="button" class="btn btn-default btn-block" onclick="setText(\'column3\', 9)">9</button>' +
+        '</div>';
         
         return $htmlObj;
     }
 
     //function to change UI based on correct or incorrect answer status
     function addValidationUI(questionAnswerStatus) {
-     
-        //
-        //Learnosity Tech Test: Complete here
-        //
         
     }
 
@@ -41,7 +74,6 @@ LearnosityAmd.define(['jquery-v1.10.2'], function ($) {
 
         //add on validate button.
         init.events.on('validate', function () {
-            if (init.response !== undefined) {
 
                 //check if answer is correct, and pass true or false to the function to update validation UI
                 var scorer = new CustomNumberPadScorer(init.question, init.response);
