@@ -1,0 +1,26 @@
+.lrn.lrn_widget.lrn_custom {
+	font-size: 20px;
+}
+
+.lrn.lrn_widget.lrn_custom input {
+	padding: 7px;
+}
+
+.lrn.lrn_widget.lrn_custom .row-valid > td {
+	background-color: #E7F4E1;
+}
+.lrn.lrn_widget.lrn_custom .row-invalid > td {
+	background-color: #FBDDDD;
+}
+.lrn.lrn_widget.lrn_custom .btn-option {
+	width:100%;
+}
+.lrn.lrn_widget.lrn_custom .table td {
+	padding:0;
+	text-align: center;
+}
+
+.lrn.lrn_widget.lrn_custom .table-header {
+	font-weight: bold;
+	text-align: center;
+}

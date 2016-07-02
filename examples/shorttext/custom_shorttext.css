@@ -1,0 +1,15 @@
+.lrn.lrn_widget.lrn_custom {
+    font-size: 20px;
+}
+
+.lrn.lrn_widget.lrn_custom input {
+    padding: 7px;
+}
+
+.lrn.lrn_widget.lrn_custom .shorttext-valid {
+	background-color: #E7F4E1;
+}
+
+.lrn.lrn_widget.lrn_custom .shorttext-invalid {
+	background-color: #FBDDDD;
+}
