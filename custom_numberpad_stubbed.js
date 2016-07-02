@@ -54,8 +54,19 @@ LearnosityAmd.define(['jquery-v1.10.2'], function ($) {
     }
 
     //function to change UI based on correct or incorrect answer status
-    function addValidationUI(questionAnswerStatus) {
-        
+    function addValidationUI(questionAnswerStatus) { 
+        var messageHTML;
+
+        // Remove previous Correct/Incorrect message if it exists
+        $('#message').remove();
+
+        if (questionAnswerStatus) {
+            messageHTML = '<div  id="message" class="alert alert-success" role="alert">Correct</div>';
+        } else {
+            messageHTML = '<div  id="message" class="alert alert-danger" role="alert">Incorrect</div>';
+        }
+        $(messageHTML).insertBefore('.lrn_question');
+           
     }
 
 
@@ -74,7 +85,15 @@ LearnosityAmd.define(['jquery-v1.10.2'], function ($) {
 
         //add on validate button.
         init.events.on('validate', function () {
+            // Determine the response by adding the numbers for each column multiplied by its degree
+            // Note the by multiplying by a number the result becomes a number
+            var $response1 = $('#column1', init.$el).val() * 100;
+            var $response2 = $('#column2', init.$el).val() * 10;
+            var $response3 = $('#column3', init.$el).val() * 1;
 
+            init.response = $response1 + $response2 + $response3;
+
+            if (init.response !== undefined) {
                 //check if answer is correct, and pass true or false to the function to update validation UI
                 var scorer = new CustomNumberPadScorer(init.question, init.response);
 
@@ -93,11 +112,8 @@ LearnosityAmd.define(['jquery-v1.10.2'], function ($) {
 
     CustomNumberPadScorer.prototype.isValid = function () {
         //return true or false depending on student answer
-        
-
-        //
-        //Learnosity Tech Test: Complete here
-        //
+        //Since this.response is a number we have to convert this.question.valid_response to a number too
+        return this.response === Number(this.question.valid_response);
 
     };
 
