@@ -32,7 +32,7 @@ To view the solution I provided for the Learnosity Tech Test you will need the f
 2. Navigate to the learnosity-tech-test directory that was just downloaded:
   
   ```
-  cd learnosity-tech-test.git
+  cd learnosity-tech-test
   ```
 3. Start up the application by typing the command: 
   
