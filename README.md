@@ -7,8 +7,9 @@ This repository contains code I modified for the **Learnosity Business Developme
 
 ## The Learnosity Tech Test 
 The Learnosity Tech Test involved completing one of the following challenges:
+
 1. Create a Custom Question Type Using Guided Instructions
-2. Create an Original Demo Using Their APIs
+2. Create an Original Demo Using Learnosity APIs
 
 To quickly familiarise myself with the technology behind Learnosity I chose option 1.
 
@@ -20,17 +21,20 @@ To view the solution I provided for the Learnosity Tech Test you will need the f
 
 ### Instructions
 1. Download the code from this repository.  You can use the command:
-```
-git clone https://github.com/VincentAlcantara/learnosity-tech-test.git
-```
+
+  ```
+  git clone https://github.com/VincentAlcantara/learnosity-tech-test.git
+  ```
 2. Navigate to the learnosity-tech-test directory that was just downloaded:
-```
-cd learnosity-tech-test.git
-```
-3. Start up the application by typing the command:
-```
-php -S localhost:8000
-```
+  
+  ```
+  cd learnosity-tech-test.git
+  ```
+3. Start up the application by typing the command: 
+  
+  ```
+  php -S localhost:8000
+  ```
 4. Visit [http://localhost:8000/custom_numberpad.php](http://localhost:8000/custom_numberpad.php)
 
 ### Important Notes:
