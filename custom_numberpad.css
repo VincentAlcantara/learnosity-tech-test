@@ -23,8 +23,14 @@
 .lrn.lrn_widget.lrn_custom .table-header {
 	font-weight: bold;
 	text-align: center;
+	background: none;
 }
 
-.lrn .btn-group-vertical {
-	padding: 0;
+.lrn.lrn_widget.lrn_custom .row-invalid > td {
+	background-color: #FBDDDD;
 }
+
+.lrn.lrn_widget.lrn_custom .btn-option:focus{
+	background: #eee;
+}
+
