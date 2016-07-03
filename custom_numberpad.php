@@ -35,7 +35,8 @@
         <style>
 
         .question-container {
-            width:400px;
+            width:610px;
+            padding: 7px;
         }
 
         </style>
